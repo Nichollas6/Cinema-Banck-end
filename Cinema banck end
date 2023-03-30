@@ -1,0 +1,117 @@
+<?php 
+class Filme {
+  public $titulo;
+  public $genero;
+  public $duracao;
+
+  public function __construct($titulo, $genero, $duracao) {
+    $this->titulo = $titulo;
+    $this->genero = $genero;
+    $this->duracao = $duracao;
+  }
+
+  public function getTitulo() {
+    return $this->titulo;
+  }
+
+  public function getGenero() {
+    return $this->genero;
+  }
+
+  public function getDuracao() {
+    return $this->duracao;
+  }
+}
+
+class Cliente {
+  private $nome;
+  private $idade;
+  private $cpf;
+
+  public function __construct($nome, $idade) {
+    $this->nome = $nome;
+    $this->idade = $idade;
+    $this->cpf = array();
+  }
+
+  public function getNome() {
+    return $this->nome;
+  }
+
+  public function getIdade() {
+    return $this->idade;
+  }
+
+  public function adicionarCpf($cpf) {
+    $this->cpf[] = $cpf;
+  }
+
+  public function getCpf() {
+    return $this->cpf;
+  }
+  
+}
+
+class Ingresso {
+  private $cliente;
+  private $sala;
+  private $filme;
+  private $valor;
+  private $forma_de_pagamento;
+
+  public function __construct($cliente, $sala, $filme, $valor, $forma_de_pagamento) {
+    $this->cliente = $cliente;
+    $this->sala = $sala;
+    $this->filme = $filme;
+    $this->valor = $valor;
+    $this->forma_de_pagamento = $forma_de_pagamento;
+  }
+
+  public function getCliente() {
+    return $this->cliente;
+  }
+
+  public function getSala() {
+    return $this->sala;
+  }
+
+  public function getFilme() {
+    return $this->filme;
+  }
+
+  public function getValor() {
+    return $this->valor;
+  }
+
+  public function getForma_de_pagamento() {
+    return $this->forma_de_pagamento;
+  }
+}
+  
+ class Sala {
+  public $numero;
+  public $cadeiras;
+  public $filmes;
+
+  public function __construct($numero, $cadeiras) {
+    $this->numero = $numero;
+    $this->capacidade = $capacidade;
+    $this->filmes = array();
+  }
+
+  public function getNumero() {
+    return $this->numero;
+  }
+
+  public function getCadeiras() {
+    return $this->cadeiras;
+  }
+
+  public function adicionarFilme($filme) {
+    $this->filmes[] = $filme;
+  }
+
+  public function getFilmes() {
+    return $this->filmes;
+  }
+}
